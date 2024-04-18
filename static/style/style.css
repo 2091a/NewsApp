@@ -1,0 +1,165 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+#conatiner{
+    align-items: center;
+    width: 100px;
+}
+
+nav{
+    position: relative;
+
+}
+
+.hamburgar{
+    width: 40px;
+    height: 40px;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    padding-right: 20px ;
+
+
+
+}
+
+.hamburgar div{
+    background-color: rgb(73,80,87);
+    width: 100%;
+    height: 10px;
+    border-radius: 10px;
+     
+}
+
+.navconatiner{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    background-color: rgb(43,48,53);
+
+}
+
+.navconatiner img{
+    width: 200px;
+    height: 100px;
+}
+.navconatiner ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    gap: 20px;
+    padding-right: 30px;
+}
+
+.navconatiner ul  li  {
+    display: flex;
+    color: white;
+    text-decoration: none;
+    list-style: none;
+    font-size: 22px;
+    gap: 2px;
+    transition: 0.5s;
+
+
+
+}
+
+.navconatiner ul a li:hover{
+    transform: scale(1.1);
+}
+
+.navcollapse ul a li:hover{
+    transform: scale(1.1);
+}
+
+.fa-hospital{
+    padding: 5px;
+}
+.fa-globe{
+    padding: 5px;
+}
+.fa-volleyball{
+    padding: 5px;
+}
+.fa-microchip{
+    padding: 5px;
+}
+.fa-atom{
+    padding: 5px;
+}
+
+
+
+.navcollapse{
+   position: absolute;
+   animation-duration: 0.4s;
+   animation-timing-function: ease-in;
+   animation-fill-mode: forwards;
+    height: 350px;
+    background-color: rgb(61,67,73);
+    bottom: 450px;
+    display:none; 
+    width: 100%;
+}
+
+.navcollapse ul{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    gap: 20px;
+    padding: 20px;
+    
+}
+
+.navcollapse ul li {
+    color: white;
+    text-decoration: none;
+    list-style: none;
+    font-size: 30px;
+
+}
+
+@media screen and (max-width: 700px ) {
+    .navconatiner ul{
+        display: none;
+    }
+    .hamburgar{
+        display: flex;
+    }
+    
+}
+
+@keyframes startham {
+    0%{
+        
+        position: absolute;
+        bottom: 450px;
+
+    }
+    100%{
+        
+        position: absolute;
+        bottom: -350px;
+    }
+    
+}
+
+@keyframes endham {
+    0%{
+        position: absolute;
+        bottom: -350px;
+    }
+    100%{
+        position: absolute;
+        bottom: 0px; 
+   }
+    
+}
